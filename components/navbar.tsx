@@ -1,16 +1,45 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">CPU Counseling</div>
-      <ul className="navbar-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  );
-};
+    <header className="navbar-header">
+      <nav className="navbar">
+        {/* Left Section: Logo and Brand */}
+        <div className="navbar-brand">
+          <Link href="/">
+            <Image
+              src="/SafeDrive-logo.png" // Change this to your logo
+              alt="SafeDrive Logo"
+              width={40}
+              height={40}
+              className="navbar-logo"
+            />
+          </Link>
+          <span className="brand-name">CPU Counseling</span>
+        </div>
 
-export default Navbar;
+        {/* Center Section: Navigation Links */}
+        <ul className="navbar-links">
+          <li>
+            <Link href="/home" className="navbar-link">Home</Link>
+          </li>
+          <li>
+            <Link href="/about" className="navbar-link">About</Link>
+          </li>
+          <li>
+            <Link href="/contact" className="navbar-link">Contact</Link>
+          </li>
+        </ul>
+
+        {/* Right Section: Log In Button */}
+        <div className="right-nav">
+          <button className="login-button">
+            <Link href="/login">Log In</Link>
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
+}
