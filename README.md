@@ -1,3 +1,8 @@
+This is unapproved thesis idea:
+- Counseling scheduling: Provides allocated time slots based on the counselor's or adviser's availability.
+- Chatbot: Available when the counselor is not available to assist.
+- Implement sentiment analysis for detecting and categorizing emotional states based on user inputs.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
